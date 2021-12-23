@@ -1,3 +1,9 @@
 20/12
 Idag har jag påbörjat mitt projekt. Startat en ny React app, kopplat tailwind till, samlat bilder och börjat kolla på vilka bilder jag ska använda samt funderat på layout och skapat mina basic componenter. Ladda ner react router dom, axios och andra npm paket samt skapat ett nytt repo och kollat mitt projekt till git.  
 Trello tavlan är klar sedan tidigare. Tid: 2h
+
+21/12
+Idag har jag  byggt en navbar
+
+23/12
+Idag har jag byggt en hamburger meny till mobilskärm
