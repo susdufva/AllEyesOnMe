@@ -6,7 +6,7 @@ function Landingpage() {
         <body>
             <div className="flex justify-center items-center mt-2">
                 <div className="lg:w-1/4 md:w-1/2 w-2/3">
-                    <img src={bgimage} alt="homepage image" />
+                    <img src={bgimage} alt="homepage" />
                 </div> 
                 <div className="">
                     <h3 className=""></h3>
