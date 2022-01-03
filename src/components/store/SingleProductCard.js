@@ -1,13 +1,18 @@
 import React from "react";
 
-function ProductCard({ productName, price, imageSrc }) {
+function SingleProductCard({id, productName, price, imageSrc }) {
   return (
     <>
+    
       <div class="flex flex-col justify-center">
         <div class="relative m-3 flex flex-wrap mx-auto justify-center">
-          <div class="relative max-w-sm min-w-[340px] bg-black shadow-lg rounded-md mx-1 my-3 cursor-pointer">
+          <div class="relative max-w-sm min-w-[340px] bg-black-900 shadow-lg rounded-md mx-1 my-3 cursor-pointer">
             <div class="overflow-x-hidden rounded-t-md relative">
-              <img class="h-48 w-full bg-contain" src={imageSrc} />
+              <img
+                class="h-48 w-full bg-contain"
+                src={id.imageSrc}
+                alt="product"
+              />
             </div>
             <div class="p-2 pl-4 flex justify-between">
               <div>
@@ -40,4 +45,4 @@ function ProductCard({ productName, price, imageSrc }) {
   );
 }
 
-export default ProductCard;
+export default SingleProductCard;

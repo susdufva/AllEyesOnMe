@@ -7,3 +7,15 @@ Idag har jag  byggt en navbar
 
 23/12
 Idag har jag byggt en hamburger meny till mobilskärm
+
+27/12
+Idag har jag startat ett nytt wordpress projekt och en ny databas och ska försöka koppla det till min React app.
+
+28/12
+Jag hann bara med alla inställningar i wordpress igår samt att lägga upp några produkter så idag kollar jag på att koppla woocommerce till React via API. 
+
+29/12
+Idag har jag designat mina produktkort samt börjat lägga upp fler atriklar i woocommerce. 
+
+3/1
+Idag har jag gjort om min backlog lite då jag insett att jag missat en hel del. Samt försökt bygga hela e-handelsflödet med att kunna klicka in på en produkt och lägga den i varukorg o sen vidare till kassa. Jag fastnade lite på react hook useParams då jag aldrig testat det förr. Så just nu sitter jag fast på att kunna klicka på en produkt och komma till single product page. Alla tutorials jag hittat hittills använder inte den senaste versionen av react-router-dom

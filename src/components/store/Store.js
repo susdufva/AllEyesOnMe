@@ -24,7 +24,7 @@ function Store() {
   let fetchProducts = () => {
     api
       .get("products", {
-        per_page: 10,
+        per_page: 100,
       })
       .then((response) => {
         if (response.status === 200) {
@@ -44,7 +44,7 @@ function Store() {
       {products.map((product)=>{
         const firstImageSrc = product.images[0] && product.images[0].src ? product.images[0].src : '';
         return (
-          <ProductCard key={product.id} productId={product.id} productName={product.name} imageSrc={firstImageSrc} price={product.price} categories= {product.categories} /> 
+          <ProductCard key={product.id} productId={product.id} productName={product.name} imageSrc={firstImageSrc} price={product.price} categories={product.categories} link={product.permalink} /> 
                 )    
       }) }
 
