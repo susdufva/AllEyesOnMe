@@ -19,3 +19,6 @@ Idag har jag designat mina produktkort samt börjat lägga upp fler atriklar i w
 
 3/1
 Idag har jag gjort om min backlog lite då jag insett att jag missat en hel del. Samt försökt bygga hela e-handelsflödet med att kunna klicka in på en produkt och lägga den i varukorg o sen vidare till kassa. Jag fastnade lite på react hook useParams då jag aldrig testat det förr. Så just nu sitter jag fast på att kunna klicka på en produkt och komma till single product page. Alla tutorials jag hittat hittills använder inte den senaste versionen av react-router-dom
+
+4/1
+Idag har jag scrollat igenom ännu en uppsjö av tutorials och guider för att försöka lösa single product page. Jag tror jag måste försöka nedgradera mitt react-router-dom till v5 istället för v6 om det går då det inte finns några guider som förklarar hur nya v6 fungerar och dokumentationen förstår jag mig inte på. 

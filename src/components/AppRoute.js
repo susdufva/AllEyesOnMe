@@ -7,6 +7,7 @@ import Navbar from './Navbar'
 import SingleProduct from './store/SingleProductFetch'
 import Checkout from './store/Checkout'
 import ProductView from './store/ProductView';
+import SingleProductFetch from './store/SingleProductFetch';
 
 
 function AppRoute() {
@@ -16,9 +17,12 @@ function AppRoute() {
                 <Navbar/>
                 <Routes>
                     <Route path='/' element={<Home/>}/>
-                    <Route path='/store' element={<Store/>}/>
+                    <Route path='/store' element={<Store/>} >
+                        <Route path=":id" element={<ProductView/>}/>
+                        </Route>
                     <Route path='/about' element={<About/>}/>
-                    <Route path="/product/:id" element={<ProductView/>}/>
+                    <Route path='/product' element={<SingleProductFetch/>} />
+                  
                     <Route path="/checkout" element={<Checkout/>} />
                 </Routes>
             </Router>  
