@@ -22,3 +22,5 @@ Idag har jag gjort om min backlog lite då jag insett att jag missat en hel del.
 
 4/1
 Idag har jag scrollat igenom ännu en uppsjö av tutorials och guider för att försöka lösa single product page. Jag tror jag måste försöka nedgradera mitt react-router-dom till v5 istället för v6 om det går då det inte finns några guider som förklarar hur nya v6 fungerar och dokumentationen förstår jag mig inte på. 
+- Jag lyckades någonlunda lösa URLen och använda useParams men det fungerade inte som jag tänkt, två componenter syntes samtidigt och jag fick bara med id, ingen annan data. Jag testar nedgradera till router-dom v5. 
+- Efter nedgradering (som också resulterade i att göra om hela AppRoute) så fungerade iaf koden med params som jag vill och single product page är nu löst.  

@@ -1,30 +1,30 @@
 import React from "react";
 
-function SingleProductCard({id, productName, price, imageSrc }) {
+function SingleProductCard({ productName, price, image }) {
   return (
     <>
     
       <div class="flex flex-col justify-center">
-        <div class="relative m-3 flex flex-wrap mx-auto justify-center">
-          <div class="relative max-w-sm min-w-[340px] bg-black-900 shadow-lg rounded-md mx-1 my-3 cursor-pointer">
+        <div class="relative m-2 flex flex-wrap mx-auto justify-center">
+          <div class="relative w-1/2 min-w-[340px] bg-black-900 shadow-lg rounded-md mx-1 my-3 cursor-pointer">
             <div class="overflow-x-hidden rounded-t-md relative">
               <img
-                class="h-48 w-full bg-contain"
-                src={id.imageSrc}
+                class="h-1/3 w-full bg-contain"
+                src={image}
                 alt="product"
               />
             </div>
             <div class="p-2 pl-4 flex justify-between">
               <div>
-                <p class="text-md uppercase text-gray-500 mb-0">
+                <p class="text-2xl uppercase text-gray-500 mb-0">
                   {productName}
                 </p>
-                <p class="text-md text-left text-gray-600 mt-0">{price}kr</p>
+                <p class="text-xl text-left text-gray-600 mt-0">{price}kr</p>
               </div>
-              <button class="flex flex-col-reverse mb-1 mr-4 group cursor-pointer">
+              <button class="flex flex-col-reverse mb-2 mr-5 group cursor-pointer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6 group-hover:opacity-70"
+                  class="h-10 w-10 group-hover:opacity-70"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="gray"

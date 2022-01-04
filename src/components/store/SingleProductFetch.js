@@ -1,41 +1,43 @@
-import React, {useState, useEffect} from "react";
-import { useParams } from "@reach/router";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api";
 import SingleProductCard from "./SingleProductCard";
 
-
-//get products from woocommerce with API
-const api = new WooCommerceRestApi({ 
+//woocommerce API
+const api = new WooCommerceRestApi({
   url: "http://localhost/AllEyesOnMe/wordpress/",
   consumerKey: process.env.REACT_APP_CUSTOMERKEY,
   consumerSecret: process.env.REACT_APP_CUSTOMERSECRET,
   version: "wc/v3",
 });
 
-function SingleProductFetch() {
+function ProductView() {
+  let { id } = useParams();
+  console.log("id", id);
 
-  let {id} = useParams();
-
-  console.log("produkt", id)
-
-  const [product, setProduct] = useState([]);
+  const [singleProduct, setSingleProduct] = useState([]);
+  const [picture, setPicture] = useState();
 
   useEffect(() => {
-    SingleProductCard(id)
-    .then(setProduct)
-  }, [id]);
+    // useEffect to fetch product with id from api endpoint
 
+    const fecthProduct = async () => {
+      const response = await api.get(`products/${id}`);
+
+      if (response.status === 200) {
+       
+        setSingleProduct(response.data);
+        console.log("RES", response.data);
+        setPicture(response.data.images[0].src);
+        
+      }
+    };
+
+    fecthProduct();
+  }, []);
+
+  return singleProduct ? <SingleProductCard key={singleProduct.id} image={picture} productName={singleProduct.name} price={singleProduct.price} /> : <SingleProductCard/> 
  
-  return (
-    <>
-      {product.map((product)=>{
-        const firstImageSrc = product.images[0] && product.images[0].src ? product.images[0].src : '';
-        return (
-          <SingleProductCard key={product.id} productId={product.id} productName={product.name} imageSrc={firstImageSrc} price={product.price} categories={product.categories} link={product.permalink} /> 
-                )    
-      }) }
-    </>
-  );
 }
 
-export default SingleProductFetch;
+export default ProductView;

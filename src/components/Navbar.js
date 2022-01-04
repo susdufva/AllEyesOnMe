@@ -23,7 +23,9 @@ function Navbar() {
             </div>
           </div>
           <div className="flex h-full items-center">
-            <div className="logo"></div>
+            <Link to="/">
+              <div className="logo"></div>
+            </Link>
           </div>
           <div className="flex h-full items-center  hover:bg-gray-900">
             <Link

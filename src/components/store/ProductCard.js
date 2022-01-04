@@ -1,20 +1,18 @@
 import React from "react";
-import {Link, Outlet} from "react-router-dom"
+import {Link} from "react-router-dom"
 
-function ProductCard({ productName, price, imageSrc, productId, key }) {
+function ProductCard({ productName, price, imageSrc, productId }) {
   return (
     <>
       <div className="flex flex-col justify-center">
         <div className="relative m-3 flex flex-wrap mx-auto justify-center">
           <div className="relative max-w-sm min-w-[340px] bg-black-900 shadow-lg rounded-md mx-1 my-3 cursor-pointer">
-            <div className="overflow-x-hidden rounded-t-md relative">
-               <Link to={`store/${productId}`}
-               key={key}> 
-             {/* <Link to={"/store" + productId}> */}
+            <div className="overflow-x-hidden rounded-t-md relative"> 
+             <Link to={"/product" + productId}> 
                 <img className="h-48 w-full bg-contain" src={imageSrc} alt="product" />
               </Link>
             </div>
-            <Outlet/>
+          
             <div className="p-2 pl-4 flex justify-between">
               <div>
                 <p className="text-md uppercase text-gray-500 mb-0">
