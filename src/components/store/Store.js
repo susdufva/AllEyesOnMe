@@ -13,7 +13,7 @@ const api = new WooCommerceRestApi({
 console.log("api", api);
 
 function Store() {
-
+  //useState to set response.data
   const [products, setProducts] = useState([]);
 
   useEffect(() => {

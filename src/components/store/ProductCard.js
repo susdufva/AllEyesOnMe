@@ -9,6 +9,7 @@ function ProductCard({ productName, price, imageSrc, productId }) {
           <div className="relative max-w-sm min-w-[340px] bg-black-900 shadow-lg rounded-md mx-1 my-3 cursor-pointer">
             <div className="overflow-x-hidden rounded-t-md relative"> 
              <Link to={"/product" + productId}> 
+             {/* Go to single product page */}
                 <img className="h-48 w-full bg-contain" src={imageSrc} alt="product" />
               </Link>
             </div>
@@ -20,6 +21,7 @@ function ProductCard({ productName, price, imageSrc, productId }) {
                 </p>
                 <p className="text-md text-left text-gray-600 mt-0">{price}kr</p>
               </div>
+              {/* Cart icon below*/}
               <button className="flex flex-col-reverse mb-1 mr-4 group cursor-pointer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

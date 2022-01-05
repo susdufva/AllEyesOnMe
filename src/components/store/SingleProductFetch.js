@@ -12,11 +12,11 @@ const api = new WooCommerceRestApi({
 });
 
 function ProductView() {
-  let { id } = useParams();
+  let { id } = useParams(); //id from clicked product on previus page 
   console.log("id", id);
 
   const [singleProduct, setSingleProduct] = useState([]);
-  const [picture, setPicture] = useState();
+  const [picture, setPicture] = useState(); //save image data here
 
   useEffect(() => {
     // useEffect to fetch product with id from api endpoint
