@@ -36,7 +36,7 @@ function ProductView() {
     fecthProduct();
   }, []);
 
-  return singleProduct ? <SingleProductCard key={singleProduct.id} image={picture} productName={singleProduct.name} price={singleProduct.price} /> : <SingleProductCard/> 
+  return singleProduct ? <SingleProductCard key={singleProduct.id} id={singleProduct.id} image={picture} productName={singleProduct.name} price={singleProduct.price} /> : <SingleProductCard/> 
  
 }
 
