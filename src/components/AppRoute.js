@@ -6,6 +6,7 @@ import About from './About'
 import Navbar from './Navbar'
 import SingleProduct from './store/SingleProductFetch'
 import Checkout from './store/Checkout'
+import Menu from "./Menu"
 
 
 
@@ -14,6 +15,7 @@ function AppRoute() {
         <>
             <Router>
                 <Navbar/>
+                <Menu/>
                 <Switch>
                     <Route path="/" exact component={Home}/>
                     <Route path="/store" component={Store} />

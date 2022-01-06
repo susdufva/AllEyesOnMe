@@ -28,3 +28,6 @@ Idag har jag scrollat igenom ännu en uppsjö av tutorials och guider för att f
 5/1
 Idag har jag lagt till instagram icon med länk och varukorgs icon med länk i min navbar. jag tror ev att jag kommer behöve bygga om min navbar dock då jag nu har två st, en för stor skärm o en för liten..
 Samt fixat about sidan. 
+
+6/1 
+Idag tänkte jag fixa klart navbaren o se ifall den ev behöver byggas om. Samt börja bygga på varukorgen

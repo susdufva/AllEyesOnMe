@@ -2,14 +2,15 @@ body{
     /* background-color: #282c34; */
     background-color:  #242222;
 }
+/* Old navbar Logo
 .logo{
-    background-image: url(./img/logo4.jpg);
+    background-image: url(./img/logo3.jpg);
     background-repeat: no-repeat;
-    height: 128.5px;
-    width: 130px;
+    height: 126px;
+    width: 120px;
     background-position: bottom;
     background-position: contain;
-}
+} */
 .dropdown:focus-within .dropdown-menu {
     opacity:1;
     transform: translate(0) scale(1);

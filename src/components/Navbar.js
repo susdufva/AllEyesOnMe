@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Style.css";
+import Logo from "./img/logo4.jpg"
 import insta from "./img/insta.jpg";
 
 function Navbar() {
   return (
     <>
-      <nav className="h-32 w-full bg-black ">
+      <nav className="h-32 w-screen bg-black ">
         <div className="w-full h-full flex justify-center items-center">
           <div className="flex h-full items-center  hover:bg-gray-900">
             <Link
@@ -25,7 +26,8 @@ function Navbar() {
           </div>
           <div className="flex h-full items-center">
             <Link to="/">
-              <div className="logo"></div>
+              {/*<img className="h-28" src={Logo}></img>*/}
+               <div className="logo h-28"></div> 
             </Link>
           </div>
           <div className="flex h-full items-center  hover:bg-gray-900">
@@ -38,10 +40,10 @@ function Navbar() {
             <div className="invisible sm:visible h-8 w-px bg-gray-300"></div>
           </div>
           <div className="flex h-full items-center mx-7">
-            <a href="https://instagram.com/alleyesonmeshades?utm_medium=copy_link">
+            <a className="invisible sm:visible" href="https://instagram.com/alleyesonmeshades?utm_medium=copy_link">
               <img className="h-6 hover:opacity-70" src={insta}></img>
             </a>
-            <Link to="/cart" className="ml-3 group invisible sm:visible">
+            <Link to="/cart" className="sm:ml-3 group">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6 group-hover:opacity-70"
