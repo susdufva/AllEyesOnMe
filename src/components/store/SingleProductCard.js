@@ -26,7 +26,7 @@ function SingleProductCard({ productName, price, image, id}) {
               <Link to={"/cart" + id} className="flex flex-col-reverse mb-2 mr-5 group cursor-pointer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-10 w-10 group-hover:opacity-70"
+                  className="h-9 w-9 group-hover:opacity-70"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="gray"

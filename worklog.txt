@@ -31,3 +31,6 @@ Samt fixat about sidan.
 
 6/1 
 Idag tänkte jag fixa klart navbaren o se ifall den ev behöver byggas om. Samt börja bygga på varukorgen
+
+8/1
+Idag har jag byggt vidare på min varukorg och upptäckt problem med att lägga flera produkter i varukorgen då localstorage setItem:id bara sparar ett id. Så jag måste läsa på om sessionStorage och andra metoder för att lösa så varukorgen kan spara flera produkter. 
