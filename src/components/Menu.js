@@ -41,7 +41,7 @@ function Menu() {
                     className="invisible sm:visible"
                     href="https://instagram.com/alleyesonmeshades?utm_medium=copy_link"
                   >
-                    <img className="h-6 hover:opacity-70" src={insta}></img>
+                    <img className="h-6 hover:opacity-70" src={insta} alt="instagram"></img>
                   </a>
                 </li>
               </ul>

@@ -6,7 +6,7 @@ import About from './About'
 import SingleProduct from './store/SingleProductFetch'
 import Checkout from './store/Checkout'
 import Menu from "./Menu"
-import Cart from "./store/Cart"
+import Cart from "./store/CartItemFetch"
 
 
 function AppRoute() {

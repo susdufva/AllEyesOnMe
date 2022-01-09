@@ -1,44 +1,24 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api";
 
-//woocommerce API
-const api = new WooCommerceRestApi({
-  url: "http://localhost/AllEyesOnMe/wordpress/",
-  consumerKey: process.env.REACT_APP_CUSTOMERKEY,
-  consumerSecret: process.env.REACT_APP_CUSTOMERSECRET,
-  version: "wc/v3",
-});
 
-function Cart() {
-  let { id } = useParams(); //id from clicked product on previus page
-  console.log("id", id);
+function Cart({id, image, productName, price, categories}) {
+  
+  localStorage.setItem("productId", id); //save product id to localstorage
 
-  const products = localStorage.setItem("productId", id); //save product to localstorage
-
-  const [cartItem, setCartItem] = useState([]);
-  const [picture, setPicture] = useState(); //save image data here
-
-  useEffect(() => {
-    // useEffect to fetch product with id from api endpoint
-
-    const fecthProduct = async () => {
-      const response = await api.get(`products/${id}`);
-
-      if (response.status === 200) {
-        setCartItem(response.data);
-        console.log("RES", response.data);
-        setPicture(response.data.images[0].src);
+  let products =[
+      {
+          name: productName, 
+          price: price,
+          inCart: 0
       }
-    };
+  ] 
 
-    fecthProduct();
-  }, []);
+  
 
   return (
     <>
       {/* Ny kod  */}
-      <section className="">
+      <section className="sm:mt-6">
         <div className="flex flex-col h-full mx-auto lg:justify-center lg:flex-row ">
           <div className="flex-col items-center justify-center w-full lg:w-3/5 md:flex ">
             <div className="w-full h-full sm:px-20 px-6 py-14">
@@ -50,20 +30,20 @@ function Cart() {
               <div className="flex -mx-2 px-6 py-5 mt-4 border-b border-gray-300 pb-10">
                 <div className="flex w-full">
                   {/*  <!-- product --> */}
-                  <div className="w-24">
+                  <div className="">
                     <img
-                      className="h-32"
-                      src="https://drive.google.com/uc?id=18KkAVkGFvaGNqPy2DIvTqmUH_nk39o3z"
-                      alt=""
+                      className="w-32 sm:w-48"
+                      src={image}
+                      alt="product in cart"
                     />
                   </div>
                   <div className="flex flex-col text-left ml-4 flex-grow">
-                    <span className="font-bold text-gray-600 text-sm pb-1">
-                      Iphone 6S
+                    <span className="font-bold text-gray-600 text-2xl pb-1">
+                      {productName}
                     </span>
-                    <span className="text-gray-500 text-xs pb-1">Apple</span>
-                    <span className="font-semibold text-sm text-gray-500 text-xs">
-                      Remove kr
+                    <span className="text-gray-500 text-xs pb-1">{categories}</span>
+                    <span className="font-semibold text-lg text-gray-500 text-xs">
+                      {price}kr
                     </span>
                     <div className="flex justify-end px-1">
                       <button>
@@ -87,9 +67,9 @@ function Cart() {
           </div>
         {/* Order summary section */}
           <form className="md:mt-28 flex justify-center w-full lg:w-2/6">
-            <div className="flex flex-col justify-center items-center w-full text-gray-800 rounded-lg sm:w-4/6 md:w-3/6 lg:w-4/5 dark:text-gray-100">
+            <div className="flex flex-col justify-center items-center w-full text-gray-800 rounded-lg sm:w-4/6 md:w-3/6 lg:w-4/5">
               <div className="py-4 w-4/5 sm:w-full sm:py-8 bg-gray-300 rounded-lg  text-left p-10">
-                <h1 className=" font-semibold text-xl border-b border-gray-800 pb-6">
+                <h1 className=" font-semibold text-lg sm:text-xl border-b border-gray-800 sm:pb-6">
                   Order Summary
                 </h1>
                 <div className="flex justify-between mt-5 mb-5">
