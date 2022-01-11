@@ -37,3 +37,10 @@ Idag har jag byggt vidare på min varukorg och upptäckt problem med att lägga 
 
 9/1
 idag har jag jobbat vidare på min varukorg och på hur jag lägger till mer än ett värde i samma localstorage key då det visst ska gå
+
+10/1
+Fortsatt arbete med varukorgen och fortsatta problem med hur jag lägger till fler än en produkt. Mitt största problem med alla tutorials är att de använder statiska produkter och inte api. 
+
+11/1
+Jag har insett att jag kommer behöva bygga om min app för att få den att fungera som jag vill så idag kollar jag på olika metoder med useContext, Redux osv för att försöka bestämma vilken metod jag ska bygga om den efter. 
+-- Efter att allt jag testat idag misslyckats har jag nu hittat två videos där dom bygger webshop med hjälp av redux och produkter från en databas så imorgon kommer jag titta vidare på det. 

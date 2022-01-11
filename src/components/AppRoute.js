@@ -10,6 +10,7 @@ import Cart from "./store/CartItemFetch"
 
 
 function AppRoute() {
+    
     return (
         <>
             <Router>
@@ -20,6 +21,7 @@ function AppRoute() {
                     <Route path='/about' component={About}/>
                     <Route path='/product:id' component={SingleProduct} />
                     <Route path='/cart:id' component={Cart} />
+                    <Route path='/cart' component={Cart} />
                     <Route path="/checkout" component={Checkout} />
                 </Switch>
             </Router>  

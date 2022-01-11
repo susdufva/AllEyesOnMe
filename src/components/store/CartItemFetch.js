@@ -14,9 +14,8 @@ const api = new WooCommerceRestApi({
 function CartItemFetch() {
 
     let { id } = useParams(); //id from clicked product on previus page
-    console.log("id", id);
 
-    const [cartItem, setCartItem] = useState([]);
+    const [cartItem, setCartItem] = useState([]); //save response from fetch 
     const [picture, setPicture] = useState(); //save image data here
     const [categorie, setCategorie] = useState(); //save categorie here
 

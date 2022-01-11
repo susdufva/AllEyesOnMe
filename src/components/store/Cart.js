@@ -1,19 +1,30 @@
 import React, { useState, useEffect } from "react";
-
+import OrderSummary from "./OrderSummary";
 
 function Cart({id, image, productName, price, categories}) {
   
-  localStorage.setItem("productId", id); //save product id to localstorage
+  let cart = document.querySelectorAll('#add-cart'); //element id from add to cart button on previous page
+  //localStorage.setItem("productId", id); //save product id to localstorage
 
-  let products =[
+  let products =[ //products get value from props 
       {
+          id: id,
           name: productName, 
           price: price,
-          inCart: 0
-      }
+          inCart: 0,
+      },
   ] 
 
-  
+  localStorage.setItem('dataKey', JSON.stringify(products));
+  const val = localStorage.getItem('dataKey');
+  console.log("val", val);
+
+  //const [productsInCart, setProductsInCart] = useState(products); //set productsInCart from props saved in const products 
+
+  const product = {id, image, productName, price, categories}
+  console.log("produkt", product)
+  console.log("produkts", products)
+
 
   return (
     <>
