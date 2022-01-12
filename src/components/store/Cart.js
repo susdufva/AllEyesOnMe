@@ -11,13 +11,8 @@ function Cart({id, image, productName, price, categories}) {
           id: id,
           name: productName, 
           price: price,
-          inCart: 0,
       },
   ] 
-
-  localStorage.setItem('dataKey', JSON.stringify(products));
-  const val = localStorage.getItem('dataKey');
-  console.log("val", val);
 
   //const [productsInCart, setProductsInCart] = useState(products); //set productsInCart from props saved in const products 
 

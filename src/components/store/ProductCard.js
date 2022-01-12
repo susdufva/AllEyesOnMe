@@ -1,7 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import {Link} from "react-router-dom"
 
 function ProductCard({ productName, price, imageSrc, productId }) {
+
+  const [respons, setRespons] = useState(true)
+  const props = {productName, price, imageSrc, productId}
+
   return (
     <>
       <div className="flex flex-col justify-center">

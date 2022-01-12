@@ -1,3 +1,4 @@
+/*@import url(google font) */
 body{
     /* background-color: #282c34; */
     background-color:  #242222;
@@ -11,6 +12,7 @@ body{
     background-position: bottom;
     background-position: contain;
 } */
+/*Dropdown in hamburgermenu mobile screen*/
 .dropdown:focus-within .dropdown-menu {
     opacity:1;
     transform: translate(0) scale(1);

@@ -17,6 +17,7 @@ function ProductView() {
 
   const [singleProduct, setSingleProduct] = useState([]);
   const [picture, setPicture] = useState(); //save image data here
+  const [categorie, setCategorie] = useState(); //save categorie here
 
   useEffect(() => {
     // useEffect to fetch product with id from api endpoint
@@ -29,14 +30,14 @@ function ProductView() {
         setSingleProduct(response.data);
         console.log("RES", response.data);
         setPicture(response.data.images[0].src);
-        
+        setCategorie(response.data.categories[0].name)
       }
     };
 
     fecthProduct();
   }, []);
 
-  return singleProduct ? <SingleProductCard key={singleProduct.id} id={singleProduct.id} image={picture} productName={singleProduct.name} price={singleProduct.price} /> : <SingleProductCard/> 
+  return singleProduct ? <SingleProductCard key={singleProduct.id} id={singleProduct.id} image={picture} productName={singleProduct.name} price={singleProduct.price} categories={categorie}/> : <SingleProductCard/> 
  
 }
 

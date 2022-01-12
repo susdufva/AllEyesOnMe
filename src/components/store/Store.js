@@ -21,8 +21,8 @@ function Store() {
     fetchProducts();
   }, []);
 
-  let fetchProducts = () => {
-    api
+  let fetchProducts = async () => {
+    await api
       .get("products", {
         per_page: 100,
       })
@@ -40,14 +40,14 @@ function Store() {
   return (
     <>
       <div className="grid grid-cols-3 gap-1 mt-4">
-        
+      
       {products.map((product)=>{
         const firstImageSrc = product.images[0] && product.images[0].src ? product.images[0].src : '';
         return (
           <ProductCard key={product.id} productId={product.id} productName={product.name} imageSrc={firstImageSrc} price={product.price} categories={product.categories} link={product.permalink} /> 
                 )    
       }) }
-
+        
       </div>
     </>
   );

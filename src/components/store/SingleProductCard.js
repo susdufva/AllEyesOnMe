@@ -1,7 +1,6 @@
-import React, {useState} from "react";
-import {Link} from 'react-router-dom'
+import React from "react";
 
-function SingleProductCard({ productName, price, image, id}) {
+function SingleProductCard({ productName, price, image, id, categories}) {
 
   let products =[ //products get value from props 
     {
@@ -9,15 +8,21 @@ function SingleProductCard({ productName, price, image, id}) {
         image: image,
         name: productName, 
         price: price,
-        inCart: 0
+        categories : categories
     }
 ] 
-/* const [cart, setCart] = useState([])
-console.log("cart", cart)
-const addCart = (id) => {
-  setCart([...cart, id]);
-} */
-const [productsInCart, setProductsInCart] = useState(products); //set productsInCart from props saved in const products 
+
+const addToCart = () =>{ //add product to localStorage onClick 
+  if(localStorage.getItem('cartItem') === null) {
+    localStorage.setItem('cartItem', JSON.stringify(products))
+    } 
+    else {
+      let cartItem = JSON.parse(localStorage.getItem('cartItem'));
+      cartItem.push(products)
+      console.log("cartItem",cartItem)
+      localStorage.setItem('cartItem', JSON.stringify(cartItem))
+    }
+}
 
   return (
     <>
@@ -39,7 +44,7 @@ const [productsInCart, setProductsInCart] = useState(products); //set productsIn
                 <p className="text-xl text-left text-gray-600 mt-0">{price}kr</p>
               </div>
               {/* Cart icon below*/}
-              <Link to={"/cart" + id} id="add-cart" className="flex flex-col-reverse mb-2 mr-5 group cursor-pointer"> 
+              <button onClick={addToCart} className="flex flex-col-reverse mb-2 mr-5 group cursor-pointer"> 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-9 w-9 group-hover:opacity-70"
@@ -54,7 +59,7 @@ const [productsInCart, setProductsInCart] = useState(products); //set productsIn
                     d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                   />
                 </svg>
-              </Link> 
+              </button> 
             </div>
           </div>
         </div>
