@@ -12,7 +12,8 @@ function SingleProductCard({ productName, price, image, id, categories}) {
     }
 ] 
 
-const addToCart = () =>{ //add product to localStorage onClick 
+const addToCart = () =>{ 
+  //add products to localStorage onClick 
   if(localStorage.getItem('cartItem') === null) {
     localStorage.setItem('cartItem', JSON.stringify(products))
     } 
@@ -22,7 +23,31 @@ const addToCart = () =>{ //add product to localStorage onClick
       console.log("cartItem",cartItem)
       localStorage.setItem('cartItem', JSON.stringify(cartItem))
     }
+
+  //add cartNumber to cart icon in navbar
+  let productNumbers = localStorage.getItem('cartNumber');
+  //Transform string from localStorgae to number
+  productNumbers = parseInt(productNumbers);
+
+  if( productNumbers ){
+      localStorage.setItem('cartNumber', productNumbers + 1);
+      document.querySelector('#cart-span').textContent = productNumbers + 1;
+  } else{
+      localStorage.setItem('cartNumber' , 1)
+      document.querySelector('#cart-span').textContent = 1;
+  }   
+
+  //calculate and add total cost to localStorage
+  let cartCost = localStorage.getItem('totalCost');
+  if(cartCost){
+      cartCost = parseInt(cartCost);
+      localStorage.setItem("totalCost", cartCost + price); 
+  } else{
+      localStorage.setItem("totalCost", price);
+  }
+
 }
+
 
   return (
     <>
@@ -44,7 +69,7 @@ const addToCart = () =>{ //add product to localStorage onClick
                 <p className="text-xl text-left text-gray-600 mt-0">{price}kr</p>
               </div>
               {/* Cart icon below*/}
-              <button onClick={addToCart} className="flex flex-col-reverse mb-2 mr-5 group cursor-pointer"> 
+              <button onClick={addToCart} id="add-cart" className="flex flex-col-reverse mb-2 mr-5 group cursor-pointer"> 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-9 w-9 group-hover:opacity-70"

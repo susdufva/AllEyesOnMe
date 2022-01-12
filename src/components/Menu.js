@@ -5,6 +5,7 @@ import insta from "./img/insta.jpg";
 import "./Style.css";
 
 function Menu() {
+
   return (
     <>
       <div className="flex flex-wrap place-items-center">
@@ -70,7 +71,7 @@ function Menu() {
                     </span>
                   </span> */}
                   <span className="cart-nr mb-5">
-                    <span>1</span>
+                    <span id="cart-span"></span>
                   </span>
                 </Link>
               </div>
