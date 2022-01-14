@@ -1,9 +1,13 @@
 import React from 'react'
 
-function OrderSummary({itemName, price, inCart}) {
+function OrderSummary() {
+
+    //calculate order summary
+    let cartCost = localStorage.getItem('totalCost');
+    cartCost = parseInt(cartCost); //number
+    let shipping = Number(49);
+    let totalCost = cartCost + shipping;
     
-    const totalPrice = price + price; 
-    console.log(totalPrice)
     return (
         <>
           <form className="md:mt-28 flex justify-center w-full lg:w-2/6">
@@ -14,20 +18,20 @@ function OrderSummary({itemName, price, inCart}) {
                 </h1>
                 <div className="flex justify-between mt-5 mb-5">
                   <span className="font-semibold text-sm uppercase">
-                    {itemName}
+                    Order Value
                   </span>
-                  <span className="font-semibold text-sm">{price}</span>
+                  <span className="font-semibold text-sm">{cartCost}kr</span>
                 </div>
                 <div className="flex justify-between mt-5">
                   <span className="font-semibold text-sm uppercase">
                     Shipping
                   </span>
-                  <span className="font-semibold text-sm">5$</span>
+                  <span className="font-semibold text-sm">{shipping}kr</span>
                 </div>
                 <div className="border-t border-gray-800 mt-5">
                   <div className="flex font-semibold justify-between py-6 text-sm uppercase">
                     <span>Total cost</span>
-                    <span>$600</span>
+                    <span>{totalCost}kr</span>
                   </div>
                   <button className="bg-gray-800 font-semibold rounded-md hover:bg-gray-700 py-3 text-sm text-white uppercase w-full">
                     Checkout

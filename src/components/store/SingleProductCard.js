@@ -14,19 +14,18 @@ function SingleProductCard({ productName, price, image, id, categories}) {
 
 const addToCart = () =>{ 
   //add products to localStorage onClick 
-  if(localStorage.getItem('cartItem') === null) {
-    localStorage.setItem('cartItem', JSON.stringify(products))
-    } 
-    else {
-      let cartItem = JSON.parse(localStorage.getItem('cartItem'));
-      cartItem.push(products)
-      console.log("cartItem",cartItem)
-      localStorage.setItem('cartItem', JSON.stringify(cartItem))
-    }
+  if(localStorage.getItem('cartItems') === null) {
+    localStorage.setItem('cartItems', JSON.stringify(products))
+  } 
+  else {
+    let cartItems = JSON.parse(localStorage.getItem('cartItems'));
+    products.forEach(product => cartItems.push(product))
+    localStorage.setItem('cartItems', JSON.stringify(cartItems))
+  } 
 
   //add cartNumber to cart icon in navbar
   let productNumbers = localStorage.getItem('cartNumber');
-  //Transform string from localStorgae to number
+  //parseInt transform string in localStorgae to number
   productNumbers = parseInt(productNumbers);
 
   if( productNumbers ){
@@ -39,15 +38,13 @@ const addToCart = () =>{
 
   //calculate and add total cost to localStorage
   let cartCost = localStorage.getItem('totalCost');
+  cartCost = parseInt(cartCost);
   if(cartCost){
-      cartCost = parseInt(cartCost);
-      localStorage.setItem("totalCost", cartCost + price); 
+      localStorage.setItem("totalCost", cartCost + parseInt(price)); 
   } else{
-      localStorage.setItem("totalCost", price);
+      localStorage.setItem("totalCost", parseInt(price));
   }
-
 }
-
 
   return (
     <>

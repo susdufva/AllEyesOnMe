@@ -6,7 +6,7 @@ import About from './About'
 import SingleProduct from './store/SingleProductFetch'
 import Checkout from './store/Checkout'
 import Menu from "./Menu"
-import Cart from "./store/CartItemFetch"
+import Cart from "./store/GetCartItems"
 import NotFound from './NotFound';
 
 function AppRoute() {
@@ -20,7 +20,6 @@ function AppRoute() {
                     <Route path="/store" component={Store} />
                     <Route path='/about' component={About}/>
                     <Route path='/product:id' component={SingleProduct} />
-                    <Route path='/cart:id' component={Cart} />
                     <Route path='/cart' component={Cart} />
                     <Route path="/checkout" component={Checkout} />
                     <Route path="/not-found" component={NotFound} />

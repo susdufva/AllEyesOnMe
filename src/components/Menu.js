@@ -1,10 +1,19 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Logo from "./img/logo2.jpg";
 import { Link } from "react-router-dom";
 import insta from "./img/insta.jpg";
 import "./Style.css";
 
 function Menu() {
+
+  useEffect (()=>{
+    //Saves cartNumber in cart even if page refreshes 
+  let productNumbers = localStorage.getItem('cartNumber');
+
+  if(productNumbers) {
+      document.querySelector('#cart-span').textContent = productNumbers;
+  }
+  })
 
   return (
     <>
@@ -16,7 +25,7 @@ function Menu() {
               <ul className="hidden sm:flex px-4 uppercase tracking-wider font-heading space-x-8 items-center">
                 <li>
                   <Link to="/store" className="hover:text-gray-300">
-                    Store
+                    Shop
                   </Link>
                 </li>
                 <div className="invisible sm:visible h-8 w-px bg-gray-300"></div>
