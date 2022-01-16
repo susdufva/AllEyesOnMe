@@ -1,10 +1,7 @@
-import React, {useState} from "react";
+import React from "react";
 import {Link} from "react-router-dom"
 
 function ProductCard({ productName, price, imageSrc, productId }) {
-
-  const [respons, setRespons] = useState(true)
-  const props = {productName, price, imageSrc, productId}
 
   return (
     <>
@@ -12,8 +9,8 @@ function ProductCard({ productName, price, imageSrc, productId }) {
         <div className="relative m-3 flex flex-wrap mx-auto justify-center">
           <div className="relative max-w-sm min-w-[340px] bg-black-900 shadow-lg rounded-md mx-1 my-3 cursor-pointer">
             <div className="overflow-x-hidden rounded-t-md relative"> 
+             {/* Link to single product page */}
              <Link to={"/product" + productId}> 
-             {/* Go to single product page */}
                 <img className="h-48 w-full bg-contain" src={imageSrc} alt="product" />
               </Link>
             </div>

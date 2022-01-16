@@ -1,11 +1,11 @@
-import React from "react";
-import CartCard from "./CartProducts";
+import React, {useContext} from "react";
+import CartCard from "./CartProductCard";
 import OrderSummary from "./OrderSummary";
+import {CartContext} from "../CartContext"
 
 function GetCartItems() {
 
-  let cartItems = localStorage.getItem("cartItems");
-  cartItems = JSON.parse(cartItems);
+  const {cart} = useContext(CartContext)
 
   return (
     <section className="sm:mt-6">
@@ -18,24 +18,20 @@ function GetCartItems() {
               </h1>
             </div>
             {/*Products in cart here*/}
-            {cartItems ? cartItems.map((product) => {
+            {cart.length ? cart.map((product) => {
               return (
                 <CartCard
                   key={product.id}
-                  productId={product.id}
-                  productName={product.name}
-                  price={product.price}
-                  image={product.image}
-                  categories={product.categories}
+                  product={product}
                 /> 
               );
-            }) :
-            <CartCard/>}
+            })  : 
+            <div className="text-white text-lg text-left border-b border-gray-300 pb-9 pt-8 pl-1">Your cart is empty</div> }
           </div>
         </div>
         {/*order summary here*/}
-        {cartItems ? 
-        <OrderSummary /> : <div> </div>}
+        {cart.length ? 
+        <OrderSummary /> : null}
       </div>
     </section>
   );

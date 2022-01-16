@@ -44,3 +44,18 @@ Fortsatt arbete med varukorgen och fortsatta problem med hur jag lägger till fl
 11/1
 Jag har insett att jag kommer behöva bygga om min app för att få den att fungera som jag vill så idag kollar jag på olika metoder med useContext, Redux osv för att försöka bestämma vilken metod jag ska bygga om den efter. 
 -- Efter att allt jag testat idag misslyckats har jag nu hittat två videos där dom bygger webshop med hjälp av redux och produkter från en databas så imorgon kommer jag titta vidare på det. 
+
+12/1 
+Dag 5 har jag nu äntligen kommit vidare med varukorgen och byggt en funktion för addToCart med localstorage samt börjat kolla på att implementera redux i mitt projekt. 
+
+13/1
+Idag har jag fortsatt jobba med localStorage och lagt till nummer för antal i shoppingcart till min cart icon och räkna ihop varukorgens totala kostnad bland annat 
+
+14/1
+idag har jag fortsatt jobba med localstorage och att hämta o displaya mina produkter i varukorgen. samt byggt en del conditional renderings för vissa componenter. Samt byggt på en funktion för att radera item ur shoppingcart. 
+
+15/1
+Idag har kollat vidare på hur jag även ska uppdatera totalCost i localStorage när man raderar en produkt från shopping carten
+
+16/1
+Idag har jag implementerat useContext i mitt projekt istället för redux och localStorage och har därmed fått all funktionalitet med shopping carten att fungera 

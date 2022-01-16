@@ -1,19 +1,13 @@
-import React, {useEffect} from "react";
+import React, {useContext} from "react";
 import Logo from "./img/logo2.jpg";
 import { Link } from "react-router-dom";
 import insta from "./img/insta.jpg";
 import "./Style.css";
+import {CartContext} from "./CartContext"
 
 function Menu() {
-
-  useEffect (()=>{
-    //Saves cartNumber in cart even if page refreshes 
-  let productNumbers = localStorage.getItem('cartNumber');
-
-  if(productNumbers) {
-      document.querySelector('#cart-span').textContent = productNumbers;
-  }
-  })
+ 
+  const {cart} = useContext(CartContext);
 
   return (
     <>
@@ -24,14 +18,14 @@ function Menu() {
               {/* Nav Links  */}
               <ul className="hidden sm:flex px-4 uppercase tracking-wider font-heading space-x-8 items-center">
                 <li>
-                  <Link to="/store" className="hover:text-gray-300">
+                  <Link to="/shop" className="hover:text-gray-300">
                     Shop
                   </Link>
                 </li>
                 <div className="invisible sm:visible h-8 w-px bg-gray-300"></div>
                 <li>
                   <Link to="" className="hover:text-gray-300 mr-2">
-                    Catagory
+                    Category
                   </Link>
                 </li>
               </ul>
@@ -80,7 +74,8 @@ function Menu() {
                     </span>
                   </span> */}
                   <span className="cart-nr mb-5">
-                    <span id="cart-span"></span>
+                    <span id="cart-span">{cart.length ? cart.length : null}</span>
+                    {/*if cart.length exists then show cart.lengt, else show null*/}
                   </span>
                 </Link>
               </div>
@@ -131,12 +126,12 @@ function Menu() {
                 >
                   <div class="py-2">
                     <Link
-                      to="/store"
+                      to="/shop"
                       tabindex="0"
                       class="text-white flex justify-between w-full px-4 py-2 text-sm uppercase leading-5 text-left hover:text-purple-200"
                       role="menuitem"
                     >
-                      Store
+                      Shop
                     </Link>
                     <Link
                       to="/about"

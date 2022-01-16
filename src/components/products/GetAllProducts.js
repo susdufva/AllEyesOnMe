@@ -12,7 +12,7 @@ const api = new WooCommerceRestApi({
 
 console.log("api", api);
 
-function Store() {
+function GetAllProducts() {
   //useState to set response.data
   const [products, setProducts] = useState([]);
 
@@ -53,4 +53,4 @@ function Store() {
   );
 }
 
-export default Store;
+export default GetAllProducts;

@@ -15,7 +15,7 @@ function ProductView() {
   let { id } = useParams(); //id from clicked product on previus page 
   console.log("id", id);
 
-  const [singleProduct, setSingleProduct] = useState([]);
+  const [singleProduct, setSingleProduct] = useState([]); //save response from fetch here
   const [picture, setPicture] = useState(); //save image data here
   const [categorie, setCategorie] = useState(); //save categorie here
 
