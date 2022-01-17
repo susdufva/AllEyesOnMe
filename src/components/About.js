@@ -4,9 +4,9 @@ function About() {
   return (
     <>
       <div className="flex justify-center items-center mt-12">
-        <div className="text-white text-md sm:text-lg tracking-wide font-semibold w-2/3 text-left">
+        <div className="text-white text-md tracking-wide font-semibold w-1/2 text-left">
           <p>
-            <b className="font-bold text-lg sm:text-xl">
+            <b className="font-bold text-lg">
               All Eyes On Me Shades{" "}
             </b>
             are unique customisations of handpicked frames from other

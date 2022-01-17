@@ -73,7 +73,7 @@ function Menu() {
                     <span className="relative inline-flex h-3 w-3 ">1 
                     </span>
                   </span> */}
-                  <span className="cart-nr mb-5">
+                  <span className="mb-5">
                     <span id="cart-span">{cart.length ? cart.length : null}</span>
                     {/*if cart.length exists then show cart.lengt, else show null*/}
                   </span>
@@ -97,6 +97,9 @@ function Menu() {
                   d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                 />
               </svg>
+              <span className="mb-5">
+                  <span id="cart-span">{cart.length ? cart.length : null}</span>
+              </span>
             </Link>
             <div class="flex relative inline-block text-left dropdown">
               <button className="navbar-burger self-center mr-12 sm:hidden">
