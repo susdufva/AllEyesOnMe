@@ -15,16 +15,16 @@ function OrderSummary() {
                   Order Summary
                 </h1>
                 <div className="flex justify-between mt-5 mb-3">
-                  <span className="font-semibold text-sm uppercase">
+                  <span className="font-semibold text-xs uppercase">
                     Order Value
                   </span>
-                  <span className="font-semibold text-sm pr-1">{cartTotal}kr</span>
+                  <span className="font-semibold text-xs pr-1">{cartTotal}kr</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="font-semibold text-sm uppercase">
+                  <span className="font-semibold text-xs uppercase">
                     Shipping
                   </span>
-                  <span className="font-semibold text-sm pr-1">{shipping}kr</span>
+                  <span className="font-semibold text-xs pr-1">{shipping}kr</span>
                 </div>
                 <div className="border-t border-gray-300 mt-5">
                   <div className="flex font-semibold justify-between py-6 text-sm uppercase">

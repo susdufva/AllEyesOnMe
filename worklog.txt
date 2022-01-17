@@ -59,3 +59,6 @@ Idag har kollat vidare på hur jag även ska uppdatera totalCost i localStorage 
 
 16/1
 Idag har jag implementerat useContext i mitt projekt istället för redux och localStorage och har därmed fått all funktionalitet med shopping carten att fungera 
+
+17/1 
+Idag har jag börjat kolla på min checkout sida samt pillat med lite design. 
