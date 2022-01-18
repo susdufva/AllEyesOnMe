@@ -26,7 +26,7 @@ export const CartProvider = ({ children }) => {
         setCartTotal(cart.reduce((sum, item) => sum + parseInt(item.price), 0));
         localStorage.setItem("cart", JSON.stringify(cart));
     }
-  }, [cart]);
+  }, [cart, cartInitialised]);
 
   useEffect(() => {
     try {

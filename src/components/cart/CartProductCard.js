@@ -7,7 +7,7 @@ function CartProductCard({product}) {
   
   return (
     <>
-      <div className="flex -mx-2 px-6 py-5 mt-4 border-b border-gray-300 pb-10">
+      <div className="flex -mx-2 px-6 py-5 mt-4 border-b border-gray-700 pb-10">
         <div className="flex w-full">
           {/*  <!-- product --> */}
           <div className="products">
@@ -29,7 +29,7 @@ function CartProductCard({product}) {
                   xmlns="http://www.w3.org/2000/svg"
                   width="15"
                   fill="grey"
-                  fill-opacity="0.7"
+                  fill-opacity="0.6"
                   height="15"
                   viewBox="0 0 24 24"
                 >

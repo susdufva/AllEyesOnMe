@@ -12,7 +12,7 @@ function GetCartItems() {
       <div className="flex flex-col h-full mx-auto lg:justify-center lg:flex-row ">
         <div className="flex-col items-center justify-center w-full lg:w-3/5 md:flex ">
           <div className="w-full h-full sm:px-20 px-6 py-14">
-            <div className="flex justify-between border-b border-gray-300 pb-8">
+            <div className="flex justify-between border-b border-gray-700 pb-8">
               <h1 className="font-bold text-gray-300 text-2xl">
                 Shopping Cart
               </h1>
@@ -23,7 +23,7 @@ function GetCartItems() {
                 <CartCard
                   key={product.id}
                   product={product}
-                /> 
+                />
               );
             })  : 
             <div className="text-white text-lg text-left border-b border-gray-300 pb-9 pt-8 pl-1">Your cart is empty</div> }

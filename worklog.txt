@@ -62,3 +62,7 @@ Idag har jag implementerat useContext i mitt projekt istället för redux och lo
 
 17/1 
 Idag har jag börjat kolla på min checkout sida samt pillat med lite design. 
+
+18/1
+Idag jobbar jag vidare med checkout sidan. 
+jag har stött på problem då woocommerce api inte tillåter requests från http utan kräver https

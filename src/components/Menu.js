@@ -63,9 +63,9 @@ function Menu() {
                     stroke="currentColor"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1.5"
                       d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                     />
                   </svg>
@@ -91,9 +91,9 @@ function Menu() {
                 stroke="currentColor"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                 />
               </svg>
@@ -101,7 +101,7 @@ function Menu() {
                   <span id="cart-span">{cart.length ? cart.length : null}</span>
               </span>
             </Link>
-            <div class="flex relative inline-block text-left dropdown">
+            <div className="flex relative inline-block text-left dropdown">
               <button className="navbar-burger self-center mr-12 sm:hidden">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -112,42 +112,42 @@ function Menu() {
                 >
                   <title>Menu</title>
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M4 6h16M4 12h16M4 18h16"
                   />
                 </svg>
               </button>
               {/* Dropdown content here */}
-              <div class="opacity-0 invisible dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95">
+              <div className="opacity-0 invisible dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95">
                 <div
-                  class="absolute right-1 w-42 mt-2 origin-top-right bg-black border border-white divide-y divide-gray-100 rounded-md outline-none"
+                  className="absolute right-1 w-42 mt-2 origin-top-right bg-black border border-white divide-y divide-gray-100 rounded-md outline-none"
                   aria-labelledby="headlessui-menu-button-1"
                   id="headlessui-menu-items-117"
                   role="menu"
                 >
-                  <div class="py-2">
+                  <div className="py-2">
                     <Link
                       to="/shop"
-                      tabindex="0"
-                      class="text-white flex justify-between w-full px-4 py-2 text-sm uppercase leading-5 text-left hover:text-purple-200"
+                      tabIndex="0"
+                      className="text-white flex justify-between w-full px-4 py-2 text-sm uppercase leading-5 text-left hover:text-purple-200"
                       role="menuitem"
                     >
                       Shop
                     </Link>
                     <Link
                       to="/about"
-                      tabindex="1"
-                      class="text-white flex justify-between w-full px-4 py-2 text-sm uppercase leading-5 text-left hover:text-purple-200"
+                      tabIndex="1"
+                      className="text-white flex justify-between w-full px-4 py-2 text-sm uppercase leading-5 text-left hover:text-purple-200"
                       role="menuitem"
                     >
                       About
                     </Link>
                     <Link
                       to="/strategy"
-                      tabindex="2"
-                      class="text-white flex justify-between w-full px-4 py-2 text-sm uppercase leading-5 text-left hover:text-purple-200"
+                      tabIndex="2"
+                      className="text-white flex justify-between w-full px-4 py-2 text-sm uppercase leading-5 text-left hover:text-purple-200"
                       role="menuitem"
                     >
                       Strategy

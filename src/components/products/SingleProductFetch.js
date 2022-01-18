@@ -35,6 +35,7 @@ function ProductView() {
     };
 
     fecthProduct();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return singleProduct ? <SingleProductCard key={singleProduct.id} id={singleProduct.id} image={picture} productName={singleProduct.name} price={singleProduct.price} categories={categorie}/> : <SingleProductCard/> 
