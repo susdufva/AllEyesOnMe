@@ -21,6 +21,12 @@ export const CartProvider = ({ children }) => {
     [setCart]
   );
 
+  const clearCart = useCallback( 
+    () => {
+      setCart([]);
+      localStorage.removeItem("cart")
+    }, []);
+
   useEffect(() => {
     if (cartInitialised) {
         setCartTotal(cart.reduce((sum, item) => sum + parseInt(item.price), 0));
@@ -43,6 +49,7 @@ export const CartProvider = ({ children }) => {
     cartTotal,
     removeItem,
     addItem,
+    clearCart,
   };
 
   return <CartContext.Provider value={ctx}>{children}</CartContext.Provider>;

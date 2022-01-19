@@ -10,7 +10,7 @@ const api = new WooCommerceRestApi({
 });
 
 function Checkout() {
-  const { cart, cartTotal } = useContext(CartContext);
+  const { cart, cartTotal, clearCart } = useContext(CartContext);
   const shipping = Number(49);
 
   const initialValue = {
@@ -39,7 +39,7 @@ function Checkout() {
   const handleOnSubmit = useCallback(
     async (e) => {
       e.preventDefault();
-
+     
       const data = {
         payment_method: "bacs",
         payment_method_title: "Direct Bank Transfer",
@@ -82,9 +82,7 @@ function Checkout() {
       await api
         .post("orders", data)
         .then(
-          (
-            e //{if(e.data) }
-          ) => console.log(e)
+          (e) => console.log(e),
         )
         .catch((error) => {
           setError("Something went wrong, please try again")
@@ -205,7 +203,7 @@ function Checkout() {
                     <span className="pr-1">{cartTotal + shipping}kr</span>
                   </div>
                   <button
-                    type="submit"
+                    onClick={clearCart}
                     className="bg-gray-800 bg-opacity-40 hover:text-gray-600 hover:border-gray-500 text-gray-300 text-sm font-semibold py-2.5 px-4 border border-gray-800 rounded-md shadow w-full uppercase"
                   >
                     Proceed to Payment

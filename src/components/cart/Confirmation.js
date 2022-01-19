@@ -4,7 +4,7 @@ function Confirmation() {
     
     return (
         <div>
-            
+            <p>Din order lyckades</p>
         </div>
     )
 }

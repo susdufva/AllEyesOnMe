@@ -13,6 +13,7 @@ import Checkout from "./cart/Checkout";
 import Menu from "./Menu";
 import Cart from "./cart/GetCartItems";
 import NotFound from "./NotFound";
+import Confirmation from "./cart/Confirmation";
 import { CartProvider } from "./CartContext";
 
 function AppRoute() {
@@ -28,6 +29,7 @@ function AppRoute() {
             <Route path="/product:id" component={SingleProduct} />
             <Route path="/cart" component={Cart} />
             <Route path="/checkout" component={Checkout} />
+            <Route path="/confirmation" component={Confirmation} />
             <Route path="/not-found" component={NotFound} />
             <Redirect to="/not-found" />
           </Switch>
