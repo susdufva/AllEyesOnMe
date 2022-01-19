@@ -6,8 +6,7 @@ const api = new WooCommerceRestApi({
   url: "http://localhost/AllEyesOnMe/wordpress/",
   consumerKey: process.env.REACT_APP_CUSTOMERKEY,
   consumerSecret: process.env.REACT_APP_CUSTOMERSECRET,
-  version: "wc/v3",
-  //axiosConfig: {headers: {}}
+  version: "wc/v3" 
 });
 
 function Checkout() {
@@ -25,7 +24,7 @@ function Checkout() {
   };
 
   const [formValues, setFormValues] = useState(initialValue);
-  //const [error, setError] = useState("")
+  const [error, setError] = useState("")
 
   const handleOnChange = useCallback(
     (e) => {
@@ -74,12 +73,11 @@ function Checkout() {
         shipping_lines: [
           {
             method_id: "flat_rate",
-            method_title: "Flat Rate",
-            total: "10.00",
+            method_title: "Fraktavgift",
+            total: "49.00", 
           },
         ],
       };
-
       //send form values to woocommerce endpoint
       await api
         .post("orders", data)
@@ -89,16 +87,16 @@ function Checkout() {
           ) => console.log(e)
         )
         .catch((error) => {
+          setError("Something went wrong, please try again")
           console.log(error.response);
         });
-      //setError("Något gick fel, vänligen försök igen")})
     },
     [formValues, cart]
   );
 
   return (
     <>
-      <form onSubmit={handleOnSubmit} className="flex justify-center w-full ">
+      <form onSubmit={handleOnSubmit} className="flex flex-col justify-center w-full items-center">
         <div className="max-w-xl m-4 px-6 py-8 bg-black bg-opacity-30 rounded mt-10 shadow-md">
           <p className="text-gray-300 font-medium">Customer information</p>
           <div className="text-left inline-block mt-4 w-1/2 pr-1">
@@ -199,6 +197,8 @@ function Checkout() {
           <div className="flex justify-center w-full lg:w-1/2">
             <div className="flex flex-col justify-center items-center w-full text-gray-300 rounded-lg sm:w-4/6 md:w-3/6 lg:w-4/5">
               <div className="py-4 w-4/5 sm:w-full sm:py-8 rounded-lg text-left p-10">
+                {/*Show error message here*/}
+                <span>{error}</span>
                 <div className="border-t border-gray-500 mt-5">
                   <div className="flex font-semibold justify-between py-6 text-sm uppercase">
                     <span>Total cost</span>

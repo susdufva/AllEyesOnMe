@@ -66,3 +66,7 @@ Idag har jag börjat kolla på min checkout sida samt pillat med lite design.
 18/1
 Idag jobbar jag vidare med checkout sidan. 
 jag har stött på problem då woocommerce api inte tillåter requests från http utan kräver https
+
+19/1
+Idag har jag gjort ett SSL certifikat för min xampp men det fungerar ändå inte att skicka post till woocommerce. Jag funderar på att sätta upp en ny databas med strapi istället. 
+--update, fick det att fungera. Nu är nästa steg att implementera en betallösning via stripe. 

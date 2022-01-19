@@ -29,7 +29,7 @@ function CartProductCard({product}) {
                   xmlns="http://www.w3.org/2000/svg"
                   width="15"
                   fill="grey"
-                  fill-opacity="0.6"
+                  fillOpacity="0.6"
                   height="15"
                   viewBox="0 0 24 24"
                 >
