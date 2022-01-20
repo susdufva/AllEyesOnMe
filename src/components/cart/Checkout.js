@@ -1,6 +1,12 @@
 import React, { useContext, useState, useCallback } from "react";
 import { CartContext } from "../CartContext";
 import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api";
+import {loadStripe} from '@stripe/stripe-js'
+import axios from 'axios'
+
+const stripePromise = loadStripe ('pk_test_51Ix6VKGrcoIWM135GevI9SHxbf160SNLxwuTZREQgJ8rHosAFKq8DoHBaVZmc17zxtTZwPrCvNdlRl1EM8lWCZ3h00UacgPyVY');
+//public key, dont need .env
+
 
 const api = new WooCommerceRestApi({
   url: "http://localhost/AllEyesOnMe/wordpress/",
@@ -10,6 +16,7 @@ const api = new WooCommerceRestApi({
 });
 
 function Checkout() {
+
   const { cart, cartTotal, clearCart } = useContext(CartContext);
   const shipping = Number(49);
 
@@ -24,13 +31,12 @@ function Checkout() {
   };
 
   const [formValues, setFormValues] = useState(initialValue);
-  const [error, setError] = useState("")
+  const [error, setError] = useState("") //show error message if response fails
 
   const handleOnChange = useCallback(
     (e) => {
       setFormValues((values) => ({
-        ...values,
-        [e.target.name]: e.target.value,
+        ...values, [e.target.name]: e.target.value,
       }));
     },
     [setFormValues]
@@ -40,7 +46,7 @@ function Checkout() {
     async (e) => {
       e.preventDefault();
      
-      const data = {
+      const data = { //values required by the api 
         payment_method: "bacs",
         payment_method_title: "Direct Bank Transfer",
         set_paid: true,
@@ -78,7 +84,7 @@ function Checkout() {
           },
         ],
       };
-      //send form values to woocommerce endpoint
+      //send values to woocommerce endpoint
       await api
         .post("orders", data)
         .then(
@@ -91,6 +97,29 @@ function Checkout() {
     },
     [formValues, cart]
   );
+
+ /*  const handleOnSubmit = useCallback(
+    async (e) => { */
+  const loadStripe = async (event) => {
+        
+    const stripe = await stripePromise;
+    const price = Number(10)
+    // axios request to create Checkout Session
+    await axios.post("http://localhost:4242/create-checkout-session", {name:"All Eyes On Me Shades", price:price})
+    .then(
+      (e) => {
+        const session = e.data.id
+      console.log(session)
+      stripe.redirectToCheckout({
+        sessionId: session,
+      });
+      }
+    )
+    .catch((error) => {
+      console.log(error);
+    });
+  
+  }  
 
   return (
     <>
@@ -203,7 +232,7 @@ function Checkout() {
                     <span className="pr-1">{cartTotal + shipping}kr</span>
                   </div>
                   <button
-                    onClick={clearCart}
+                    onClick={loadStripe}
                     className="bg-gray-800 bg-opacity-40 hover:text-gray-600 hover:border-gray-500 text-gray-300 text-sm font-semibold py-2.5 px-4 border border-gray-800 rounded-md shadow w-full uppercase"
                   >
                     Proceed to Payment

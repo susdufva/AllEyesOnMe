@@ -70,3 +70,13 @@ jag har stött på problem då woocommerce api inte tillåter requests från htt
 19/1
 Idag har jag gjort ett SSL certifikat för min xampp men det fungerar ändå inte att skicka post till woocommerce. Jag funderar på att sätta upp en ny databas med strapi istället. 
 --update, fick det att fungera. Nu är nästa steg att implementera en betallösning via stripe. 
+
+20/1
+Idag jobbar jag vidare med stripe. Stötte på problem med chrome och http igen men lyckdes lösa det så nu är betallösning på plats.  
+
+Note to self, kvar att göra:
+stripe -check
+kolla lazy loading
+kolla categorier 
+kolla lagerhantering 
+fixa sista CSSen, dubbelkolla responsivitet 
