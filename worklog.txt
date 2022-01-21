@@ -72,7 +72,10 @@ Idag har jag gjort ett SSL certifikat för min xampp men det fungerar ändå int
 --update, fick det att fungera. Nu är nästa steg att implementera en betallösning via stripe. 
 
 20/1
-Idag jobbar jag vidare med stripe. Stötte på problem med chrome och http igen men lyckdes lösa det så nu är betallösning på plats.  
+Idag jobbar jag vidare med stripe. Stötte på problem med chrome och http igen men lyckdes lösa det så nu är betallösning på plats. 
+
+21/1
+Idag ska jag fin justera koden för betalning samt bygga en orderbekräftelse sida och flytta clearCart koden dit. samt börja kolla på lazy-loading. 
 
 Note to self, kvar att göra:
 stripe -check
