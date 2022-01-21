@@ -17,7 +17,8 @@ const api = new WooCommerceRestApi({
 });
 
 function Checkout() {
-  const { cart, cartTotal } = useContext(CartContext);
+
+  const { cart, cartTotal, clearCart } = useContext(CartContext);
   const shipping = Number(49);
 
   const initialValue = {
