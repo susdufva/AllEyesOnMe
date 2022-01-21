@@ -1,13 +1,15 @@
-import React, { useEffect, useContext, useCallback } from "react";
+import React, { useEffect, useContext } from "react";
 import {CartContext} from "../CartContext"
 
 function Confirmation() {
 
-    /* const {clearCart} = useContext(CartContext);
+    const { clearCart, cartInitialised } = useContext(CartContext);
     //clear cart when confirmation page renders
     useEffect(()=>{
-        clearCart
-    }, []) */
+        if (cartInitialised) {
+          clearCart()
+        } 
+    }, [clearCart, cartInitialised]) 
     
 
   return (
@@ -18,8 +20,8 @@ function Confirmation() {
             <span className="text-purple-400 p-5">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="48"
-                height="48"
+                width="46"
+                height="46"
                 fill="currentColor"
                 className="bi bi-check2-circle"
                 viewBox="0 0 16 16"

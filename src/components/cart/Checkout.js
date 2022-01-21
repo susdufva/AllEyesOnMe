@@ -18,7 +18,7 @@ const api = new WooCommerceRestApi({
 
 function Checkout() {
 
-  const { cart, cartTotal, clearCart } = useContext(CartContext);
+  const { cart, cartTotal} = useContext(CartContext);
   const shipping = Number(49);
 
   const initialValue = {
@@ -126,7 +126,7 @@ function Checkout() {
         onSubmit={handleOnSubmit}
         className="flex flex-col justify-center w-full items-center"
       >
-        <div className="max-w-xl m-4 px-6 py-8 bg-black bg-opacity-30 rounded mt-10 shadow-md">
+        <div className="sm:w-4/6 md:w-3/6 lg:w-2/6 m-4 px-6 py-8 bg-black bg-opacity-30 rounded mt-10 shadow-md">
           <p className="text-gray-300 font-medium">Customer information</p>
           <div className="text-left inline-block mt-4 w-1/2 pr-1">
             <label className="block text-sm text-gray-600">First name</label>
@@ -226,8 +226,8 @@ function Checkout() {
         {/*Order summary here*/}
         <div className="mb-4 flex justify-center w-full ">
           <div className="flex justify-center w-full lg:w-1/2">
-            <div className="flex flex-col justify-center items-center w-full text-gray-300 rounded-lg sm:w-4/6 md:w-3/6 lg:w-4/5">
-              <div className="py-4 w-4/5 sm:w-full sm:py-8 rounded-lg text-left p-10">
+            <div className="flex flex-col justify-center items-center w-full text-gray-300 sm:w-4/5 md:w-3/5 lg:w-4/5">
+              <div className="py-4 w-full sm:py-8 rounded-lg text-left p-10">
                 {/*Show error message here*/}
                 <span>{error}</span>
                 <div className="border-t border-gray-500 mt-5">

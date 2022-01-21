@@ -24,8 +24,7 @@ export const CartProvider = ({ children }) => {
   const clearCart = useCallback( 
     () => {
       setCart([]);
-      localStorage.removeItem("cart")
-    }, []);
+    }, [setCart]);
 
   useEffect(() => {
     if (cartInitialised) {
@@ -50,6 +49,7 @@ export const CartProvider = ({ children }) => {
     removeItem,
     addItem,
     clearCart,
+    cartInitialised,
   };
 
   return <CartContext.Provider value={ctx}>{children}</CartContext.Provider>;
