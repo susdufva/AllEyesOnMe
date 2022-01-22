@@ -15,6 +15,7 @@ import Cart from "./cart/GetCartItems";
 import NotFound from "./NotFound";
 import Confirmation from "./cart/Confirmation";
 import { CartProvider } from "./CartContext";
+import Footer from "./Footer";
 
 function AppRoute() {
   return (
@@ -33,6 +34,7 @@ function AppRoute() {
             <Route path="/not-found" component={NotFound} />
             <Redirect to="/not-found" />
           </Switch>
+          <Footer/>
         </CartProvider>
       </Router>
     </>

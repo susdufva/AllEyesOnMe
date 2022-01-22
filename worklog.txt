@@ -77,6 +77,9 @@ Idag jobbar jag vidare med stripe. Stötte på problem med chrome och http igen 
 21/1
 Idag ska jag fin justera koden för betalning samt bygga en orderbekräftelse sida och flytta clearCart koden dit. samt börja kolla på lazy-loading. 
 
+22/1
+Idag har jag byggt en footer
+
 Note to self, kvar att göra:
 stripe -check
 kolla lazy loading
