@@ -80,8 +80,12 @@ Idag ska jag fin justera koden för betalning samt bygga en orderbekräftelse si
 22/1
 Idag har jag byggt en footer
 
+24/1
+Idag kollar jag på responsivitet och fortsätter med lazy loading
+
 Note to self, kvar att göra:
 stripe -check
+footer - check
 kolla lazy loading
 kolla categorier 
 kolla lagerhantering 

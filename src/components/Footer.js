@@ -44,18 +44,18 @@ function Footer() {
               </div>
             </div>
             <nav className="flex flex-wrap justify-center -my-2">
-              <div className="px-5 py-2">
-                <Link to="/about" className="text-white   hover:text-gray-900">
+              <div className="px-2 lg:px-5 py-2">
+                <Link to="/about" className="text-white   hover:text-gray-500">
                   About
                 </Link>
               </div>
-              <div className="px-5 py-2">
-                <Link to="/about" className="text-white   hover:text-gray-900">
+              <div className="px-2 lg:px-5 py-2">
+                <Link to="/about" className="text-white   hover:text-gray-500">
                   Contact
                 </Link>
               </div>
-              <div className="px-5 py-2">
-                <Link to="/" className="text-white   hover:text-gray-900">
+              <div className="px-2 lg:px-5 py-2">
+                <Link to="/terms" className="text-white   hover:text-gray-500">
                   Terms
                 </Link>
               </div>
