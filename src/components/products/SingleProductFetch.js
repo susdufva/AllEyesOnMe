@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api";
-import SingleProductCard from "./SingleProductCard";
+import loadable from "@loadable/component";
+
+const SingleProductCard = loadable(() => import ("./SingleProductCard"));
 
 //woocommerce API
 const api = new WooCommerceRestApi({
@@ -12,7 +14,7 @@ const api = new WooCommerceRestApi({
 });
 
 function ProductView() {
-  let { id } = useParams(); //id from clicked product on previus page 
+  let { id } = useParams(); //id from clicked product on previus page
   console.log("id", id);
 
   const [singleProduct, setSingleProduct] = useState([]); //save response from fetch here
@@ -26,11 +28,10 @@ function ProductView() {
       const response = await api.get(`products/${id}`);
 
       if (response.status === 200) {
-       
         setSingleProduct(response.data);
         console.log("RES", response.data);
         setPicture(response.data.images[0].src);
-        setCategorie(response.data.categories[0].name)
+        setCategorie(response.data.categories[0].name);
       }
     };
 
@@ -38,8 +39,18 @@ function ProductView() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return singleProduct ? <SingleProductCard key={singleProduct.id} id={singleProduct.id} image={picture} productName={singleProduct.name} price={singleProduct.price} categories={categorie}/> : <SingleProductCard/> 
- 
+  return singleProduct ? (
+    <SingleProductCard
+      key={singleProduct.id}
+      id={singleProduct.id}
+      image={picture}
+      productName={singleProduct.name}
+      price={singleProduct.price}
+      categories={categorie}
+    />
+  ) : (
+    <div className="text-white text-md text-center mt-10">Loading... </div>
+  );
 }
 
 export default ProductView;

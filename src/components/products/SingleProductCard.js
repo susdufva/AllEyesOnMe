@@ -14,7 +14,7 @@ function SingleProductCard({ productName, price, image, id, categories }) {
 
   return (
     <>
-      <div className="flex flex-col justify-center">
+      <div className="flex flex-col h-screen">
         <div className="relative m-2 flex flex-wrap mx-auto justify-center">
           <div className="relative w-5/6 sm:w-1/2 min-w-[340px] bg-black-900 shadow-lg rounded-md mx-1 my-3 cursor-pointer">
             <div className="overflow-x-hidden rounded-t-md relative">
