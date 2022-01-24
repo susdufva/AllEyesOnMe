@@ -39,7 +39,7 @@ function GetAllProducts() {
 
   return (
     <>
-      <div className="grid grid-cols-3 gap-1 mt-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 mt-4 mb-4 sm:p-2">
       
       {products.map((product)=>{
         const firstImageSrc = product.images[0] && product.images[0].src ? product.images[0].src : '';

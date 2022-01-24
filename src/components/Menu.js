@@ -39,6 +39,7 @@ function Menu() {
                     About
                   </Link>
                 </li>
+                {/* <!-- Header Icons --> */}
                 <div className="invisible sm:visible h-8 w-px bg-gray-300"></div>
                 <li>
                   <a
@@ -49,7 +50,6 @@ function Menu() {
                   </a>
                 </li>
               </ul>
-              {/* <!-- Header Icons --> */}
               <div className="hidden sm:flex items-center space-x-5 items-center">
                 <Link
                   to="/cart"
@@ -69,10 +69,6 @@ function Menu() {
                       d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                     />
                   </svg>
-                  {/* <span className="flex absolute -mt-7 ml-6">
-                    <span className="relative inline-flex h-3 w-3 ">1 
-                    </span>
-                  </span> */}
                   <span className="mb-5">
                     <span id="cart-span">{cart.length ? cart.length : null}</span>
                     {/*if cart.length exists then show cart.lengt, else show null*/}
@@ -144,14 +140,13 @@ function Menu() {
                     >
                       About
                     </Link>
-                    <Link
-                      to="/strategy"
+                    <a href="https://instagram.com/alleyesonmeshades?utm_medium=copy_link"
                       tabIndex="2"
                       className="text-white flex justify-between w-full px-4 py-2 text-sm uppercase leading-5 text-left hover:text-purple-200"
                       role="menuitem"
                     >
-                      Strategy
-                    </Link>
+                      Instagram
+                    </a>
                   </div>
                 </div>
               </div>

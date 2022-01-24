@@ -3,8 +3,8 @@ import React from "react";
 function About() {
   return (
     <>
-      <div className="flex justify-center items-center mt-12">
-        <div className="text-white text-md tracking-wide font-semibold w-1/2 text-left">
+      <div className="flex justify-center mt-28 h-screen">
+        <div className="text-white text-sm sm:text-md tracking-wide font-semibold w-full px-6 sm:w-2/3 lg:w-1/2 text-left">
           <p>
             <b className="font-bold text-lg">
               All Eyes On Me Shades{" "}
