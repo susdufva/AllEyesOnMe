@@ -11,15 +11,15 @@ function CartProductCard({product}) {
         <div className="flex w-full">
           {/*  <!-- product --> */}
           <div className="products">
-            <img className="w-32 sm:w-48" src={product.image} alt="product in cart" />
+            <img className="h-32 w-32 sm:w-36 sm:h-32" src={product.image} alt="product in cart" />
           </div>
           <div className="flex flex-col text-left ml-4 flex-grow">
-            <span className="font-bold text-gray-600 text-2xl pb-1">
+            <span className="font-semibold text-gray-200 text-lg pb-1">
               {product.name}
             </span>
-            <span className="text-gray-500 text-xs pb-1">{product.categories}</span>
-            <span className="font-semibold text-lg text-gray-500 text-xs">
-              {product.price}kr
+            <span className="text-gray-200 text-xs pb-1">{product.categories}</span>
+            <span className="font-semibold text-md text-gray-200 text-xs">
+              {product.price} kr
             </span>
             {/*  X icon */}
             <div className="flex justify-end px-1">

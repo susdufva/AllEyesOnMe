@@ -26,7 +26,9 @@ function GetCartItems() {
                 />
               );
             })  : 
-            <div className="text-white text-lg text-left border-b border-gray-300 pb-9 pt-8 pl-1">Your cart is empty</div> }
+            <div className="h-screen ">
+              <div className="text-white text-lg text-left border-b border-gray-700 pb-9 pt-8 pl-1">Your cart is empty</div>
+            </div> }
           </div>
         </div>
         {/*order summary here*/}

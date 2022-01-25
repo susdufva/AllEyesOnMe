@@ -231,9 +231,9 @@ function Checkout() {
                 {/*Show error message here*/}
                 <span>{error}</span>
                 <div className="border-t border-gray-500 mt-5">
-                  <div className="flex font-semibold justify-between py-6 text-sm uppercase">
+                  <div className="flex font-semibold justify-between py-6 text-sm">
                     <span>Total cost</span>
-                    <span className="pr-1">{cartTotal + shipping}kr</span>
+                    <span className="pr-1">{cartTotal + shipping} kr</span>
                   </div>
                   <button
                     onClick={loadStripe}

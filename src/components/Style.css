@@ -3,15 +3,9 @@ body{
     /* background-color: #282c34; */
     background-color:  #242222;
 }
-/* Old navbar Logo
-.logo{
-    background-image: url(./img/logo3.jpg);
-    background-repeat: no-repeat;
-    height: 126px;
-    width: 120px;
-    background-position: bottom;
-    background-position: contain;
-} */
+#grad {
+    background-image: linear-gradient(black, #242222);
+}
 /*Dropdown in hamburgermenu mobile screen*/
 .dropdown:focus-within .dropdown-menu {
     opacity:1;

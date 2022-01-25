@@ -4,7 +4,7 @@ import bgimage from "./img/bg_sofia.jpg"
 function Landingpage() {
     return (
         <body>
-            <div className="flex justify-center items-center h-screen mt-12 p-1">
+            <div className="flex justify-center items-center h-screen mt-10 p-1">
                 <div className="lg:w-2/5 md:w-1/2 w-1/1 h-full">
                     <img src={bgimage} alt="homepage" />
                 </div> 

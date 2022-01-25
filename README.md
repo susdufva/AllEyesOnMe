@@ -6,6 +6,7 @@ React version 17.0.2 och wordpress version 5.8
 Mitt wordpress anävnder phpMyAdmin med Maria DB som databas. 
 
 Jag använder Node js i mitt react projekt, i package.json kan man se vilka npm paket jag använder.  
+Jag har även implementerat Stripe betallösning som har en egen package.json fil. 
 
 För frontend design har jag använt mig av Tailwind CSS
 
@@ -15,11 +16,9 @@ De obligatoriska moment mitt projekt innehåller är:
 - Ett externt system (Wordpress) som används via API, läsa och skriva. 
 - Koppling till en betallösning (Stripe)
 - Routing och snygga URL:er via react-router-dom
-- Tjänsten hanterar användaruppgifter och skickar till databasen, dock  
-endast gästanvändare, ingen inloggningg är möjlig.  
+- Tjänsten hanterar användaruppgifter och skickar till databasen, dock endast gästanvändare, ingen inloggningg är möjlig.  
 - Frontend utan omladdningar av sida. useContext håller koll på varukorgen och uppdaterar informationen utan omladdningar. Ex ändrar varukorgssiffran och totalpriset per automatik om en produkt tas bort ur varukorgen. 
 - Frontend är responsiv och har “lazy-loading” via react-lazy
-- Systemet innehåller produkt-och lagerhantering, endast en produkt(1st per produkt)
 
 # Getting Started with Create React App
 

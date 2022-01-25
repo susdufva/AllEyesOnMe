@@ -41,9 +41,9 @@ function GetAllProducts() {
   return (
     <>
     <Suspense
-      fallback={<div className="h-screen text-white text-lg mt-14">Entering the shop<PropagateLoader/></div>}
+      fallback={<div className="min-h-screen text-white text-lg mt-14">Entering the shop<PropagateLoader/></div>}
       >
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 mt-4 mb-4 sm:p-2">
+      <div className="min-h-screen grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 mt-4 mb-4 sm:p-2">
           {products.map((product) => {
             const firstImageSrc =
               product.images[0] && product.images[0].src

@@ -4,16 +4,16 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <>
-      <footer className="relative bg-black bg-opacity-60 pt-8 pb-6">
-        <div className="mx-auto px-4">
+      <footer className="relative pt-24 pb-3">
+        <div className="">
           <div className="flex justify-between px-8 text-left">
             <div className="w-full lg:w-6/12 px-4">
-              <h4 className="text-xl font-semibold text-white">
+              <h4 className="text-lg font-semibold text-white">
                 Don't be a stranger!
               </h4>
               <div className="flex items-center">
                 <a href="https://instagram.com/alleyesonmeshades?utm_medium=copy_link">
-                  <span className="p-2 cursor-pointer">
+                  <span className="p-1 cursor-pointer">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="fill-current text-white"
@@ -29,7 +29,7 @@ function Footer() {
                     </svg>
                   </span>
                 </a>
-                <span className="text-white p-2 cursor-pointer">
+                <span className="text-white p-2 px-4 cursor-pointer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="28"
@@ -43,25 +43,25 @@ function Footer() {
                 </span>
               </div>
             </div>
-            <nav className="flex flex-wrap justify-center -my-2">
-              <div className="px-2 lg:px-5 py-2">
+            <nav className="text-xs sm:text-sm flex flex-wrap justify-center -my-2">
+              <div className="px-2 py-2">
                 <Link to="/about" className="text-white   hover:text-gray-500">
                   About
                 </Link>
               </div>
-              <div className="px-2 lg:px-5 py-2">
+              <div className="px-2 py-2">
                 <Link to="/about" className="text-white   hover:text-gray-500">
                   Contact
                 </Link>
               </div>
-              <div className="px-2 lg:px-5 py-2">
+              <div className="px-2 py-2">
                 <Link to="/terms" className="text-white   hover:text-gray-500">
                   Terms
                 </Link>
               </div>
             </nav>
           </div>
-          <hr className="my-6 border-gray-700" />
+          <hr className="my-2 border-gray-600 opacity-50" />
           <div className="flex flex-wrap items-center md:justify-between justify-center">
             <div className="w-full md:w-4/12 px-4 mx-auto text-center">
               <div className="text-sm text-gray-500 font-semibold py-1">

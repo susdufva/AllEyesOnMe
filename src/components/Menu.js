@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import Logo from "./img/logo2.jpg";
+import Logo from "./img/logo2.png";
 import { Link } from "react-router-dom";
 import insta from "./img/insta.jpg";
 import "./Style.css";
@@ -13,7 +13,7 @@ function Menu() {
     <>
       <div className="flex flex-wrap place-items-center">
         <section className="">
-          <nav className="flex bg-black text-white text-sm w-screen">
+          <nav id="grad" className="flex text-white text-sm w-screen">
             <div className="px-5 xl:px-12 flex justify-center w-full items-center">
               {/* Nav Links  */}
               <ul className="hidden sm:flex px-4 uppercase tracking-wider font-heading space-x-8 items-center">
@@ -31,7 +31,7 @@ function Menu() {
               </ul>
               {/* Logo Here. */}
               <Link to="/">
-                <img className="h-28" src={Logo} alt="logo" />
+                <img className="h-24 p-2" src={Logo} alt="logo" />
               </Link>
               <ul className="hidden sm:flex px-4 uppercase tracking-wider font-heading space-x-8 items-center">
                 <li>

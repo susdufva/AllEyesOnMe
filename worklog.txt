@@ -83,10 +83,16 @@ Idag har jag byggt en footer
 24/1
 Idag kollar jag på responsivitet och fortsätter med lazy loading
 
+25/1
+Idag känner jag att jag inte vågar börja med för stora projekt då arbetet ska in imorgon. 
+Jag behöver designa om mina produktkort. Kolla om jag ev ska lägga till pagination. Kolla upp om jag ska kunna sortera på kategorier kanske. 
+
 Note to self, kvar att göra:
 stripe -check
 footer - check
-kolla lazy loading
+kolla lazy loading - check
 kolla categorier 
-kolla lagerhantering 
+kolla pagination
+fixa footer på shop sidan
+fixa länkarna i menyn
 fixa sista CSSen, dubbelkolla responsivitet 

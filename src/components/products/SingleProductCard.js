@@ -26,11 +26,11 @@ function SingleProductCard({ productName, price, image, id, categories }) {
             </div>
             <div className="p-2 pl-4 flex justify-between">
               <div>
-                <p className="text-2xl uppercase text-gray-500 mb-0">
+                <p className="text-xl font-semibold text-gray-200 mb-0">
                   {productName}
                 </p>
-                <p className="text-xl text-left text-gray-600 mt-0">
-                  {price}kr
+                <p className="text-lg text-left text-gray-200 mt-0">
+                  {price} kr
                 </p>
               </div>
               {/* Cart icon below*/}

@@ -16,21 +16,21 @@ function OrderSummary() {
                   Order Summary
                 </h1>
                 <div className="flex justify-between mt-5 mb-3">
-                  <span className="font-semibold text-xs uppercase">
+                  <span className="font-semibold text-xs">
                     Order Value
                   </span>
-                  <span className="font-semibold text-xs pr-1">{cartTotal}kr</span>
+                  <span className="font-semibold text-xs pr-1">{cartTotal} kr</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="font-semibold text-xs uppercase">
+                  <span className="font-semibold text-xs">
                     Shipping
                   </span>
-                  <span className="font-semibold text-xs pr-1">{shipping}kr</span>
+                  <span className="font-semibold text-xs pr-1">{shipping} kr</span>
                 </div>
                 <div className="border-t border-gray-700 mt-5">
-                  <div className="flex font-semibold justify-between py-6 text-sm uppercase">
+                  <div className="flex font-semibold justify-between py-6 text-sm">
                     <span>Total cost</span>
-                    <span className='pr-1'>{cartTotal + shipping}kr</span>
+                    <span className='pr-1'>{cartTotal + shipping} kr</span>
                   </div>
                   <Link to="/checkout" className="block text-center bg-gray-800 bg-opacity-40 hover:text-gray-500 hover:border-gray-500 text-gray-300 text-sm font-semibold py-2.5 px-4 border border-gray-400 rounded-md shadow w-full uppercase" > 
                     Checkout
