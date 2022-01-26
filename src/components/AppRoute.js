@@ -17,6 +17,7 @@ import Confirmation from "./cart/Confirmation";
 import { CartProvider } from "./CartContext";
 import Footer from "./Footer";
 import Terms from "./Terms";
+import Category from "./products/GetCategories";
 
 function AppRoute() {
   return (
@@ -28,6 +29,7 @@ function AppRoute() {
             <Route path="/" exact component={Home} />
             <Route path="/shop" component={Shop} />
             <Route path="/about" component={About} />
+            <Route path="/cat" component={Category}/>
             <Route path="/product:id" component={SingleProduct} />
             <Route path="/cart" component={Cart} />
             <Route path="/checkout" component={Checkout} />

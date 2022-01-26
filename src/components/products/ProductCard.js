@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom"
 
-function ProductCard({ productName, price, imageSrc, productId }) {
+function ProductCard({ productName, price, imageSrc, productId, categories }) {
 
   return (
     <>
@@ -14,7 +14,6 @@ function ProductCard({ productName, price, imageSrc, productId }) {
                 <img className="h-56 w-80 bg-contain" src={imageSrc} alt="product" />
               </Link>
             </div>
-          
             <div className="p-2 pl-4 flex justify-between">
               <p className="text-md font-semibold text-gray-300 mb-0">
                   {productName}

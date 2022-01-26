@@ -19,7 +19,9 @@ function Terms() {
             necessary inquiries before placing your order.
           </p>{" "}
           <p>World wide shipping.</p>
-          <p className="font-semibold mt-10">Contact: sofia@ljusbergolsson.com</p>
+          <p className="font-semibold mt-10">
+            Contact: sofia@ljusbergolsson.com
+          </p>
         </div>
       </div>
     </>

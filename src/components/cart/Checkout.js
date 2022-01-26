@@ -124,9 +124,9 @@ function Checkout() {
     <>
       <form
         onSubmit={handleOnSubmit}
-        className="flex flex-col justify-center w-full items-center"
+        className="flex flex-col justify-start w-full items-center h-screen"
       >
-        <div className="sm:w-4/6 md:w-3/6 lg:w-2/6 m-4 px-6 py-8 bg-black bg-opacity-30 rounded mt-10 shadow-md">
+        <div className="sm:w-4/6 md:w-3/6 lg:w-2/6 m-4 px-6 py-8 bg-black bg-opacity-30 rounded mt-20 shadow-md">
           <p className="text-gray-300 font-medium">Customer information</p>
           <div className="text-left inline-block mt-4 w-1/2 pr-1">
             <label className="block text-sm text-gray-600">First name</label>

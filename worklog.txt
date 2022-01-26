@@ -87,12 +87,6 @@ Idag kollar jag på responsivitet och fortsätter med lazy loading
 Idag känner jag att jag inte vågar börja med för stora projekt då arbetet ska in imorgon. 
 Jag behöver designa om mina produktkort. Kolla om jag ev ska lägga till pagination. Kolla upp om jag ska kunna sortera på kategorier kanske. 
 
-Note to self, kvar att göra:
-stripe -check
-footer - check
-kolla lazy loading - check
-kolla categorier 
-kolla pagination
-fixa footer på shop sidan
-fixa länkarna i menyn
-fixa sista CSSen, dubbelkolla responsivitet 
+26/1
+Idag lägger jag till infinite loading istället för pagination. Samt dubbelkollar koden o responsiviteten. Valde dock att ta bort infinite loading igen då det bara gick att få en lista, ingen grid, så alla produkter kom under varandra. Kollade på infinite scroll istället men det verkar inte fungera korrekt med react 17, bara 15 el 16. 
+Har även kollat på att sortera efter kategorier men just nu är det bara en lista med alla kategorier. Jag känner inte att jag hinner jobba vidare med den just nu. Jag försökte göra det till en drop down menu men av någon anledning ville inte det.. 

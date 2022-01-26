@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <>
-      <footer className="relative pt-24 pb-3">
+      <footer className="relative pt-28 pb-3">
         <div className="">
           <div className="flex justify-between px-8 text-left">
             <div className="w-full lg:w-6/12 px-4">
